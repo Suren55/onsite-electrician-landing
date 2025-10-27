@@ -6,6 +6,30 @@
     "heroHeadline": "Reliable Electricians for Homes & Businesses",
     "heroSubtext": "Panel upgrades, EV charger installs, lighting design, troubleshooting, and emergency calls. Serving St. John’s & surrounding areas with upfront pricing and on-time service.",
     "primaryCta": "Call Now",
-    "secondaryCta": "Get Free Estimate"
+    "secondaryCta": "Get Free Estimate",
+    "trustPoints": [
+        { "icon": "verified", "text": "Code-Compliant & Guaranteed" },
+        { "icon": "schedule", "text": "Same-Week Scheduling" },
+        { "icon": "price", "text": "Upfront Transparent Pricing" }
+      ],
+      "services": [
+    { "icon": "bolt", "title": "Panel & Service Upgrades", " blurb": "100–200A upgrades, breakers, surge protection." },
+    { "icon": "ev", "title": "EV Charger Installs", "blurb": "Home Level 2 chargers, proper permits & code." },
+    { "icon": "light", "title": "Lighting & Recessed", "blurb": "Pot lights, pendants, dimmers, smart switches." },
+    { "icon": "inspection", "title": "Troubleshooting & Repairs", "blurb": "No power, tripping breakers, GFCI issues." },
+    { "icon": "business", "title": "Commercial Electrical", "blurb": "Retail, office, warehouses, maintenance." },
+    { "icon": "outdoor", "title": "Outdoor & Generators", "blurb": "Exterior lighting, hot tubs, backup power." }
+  ],
+  "reasons": [
+    { "icon": "timer", "title": "On-Time & Reliable", "blurb": "We show up when we say we will — with clear communication." },
+    { "icon": "shield", "title": "Licensed & Insured", "blurb": "Fully licensed, insured, and compliant with local code." },
+    { "icon": "hand", "title": "Upfront Pricing", "blurb": "Fair quotes before work begins. No surprise add-ons." },
+    { "icon": "warranty", "title": "Workmanship Guarantee", "blurb": "We stand behind our work with a written warranty." }
+  ],
+  "gallery": [
+    { "src": "/src/assets/work/panel-upgrade.png", "alt": "Panel upgrade installation" },
+    { "src": "/src/assets/work/ev-charger.png", "alt": "EV charger install" },
+    { "src": "/src/assets/work/lighting.png", "alt": "Recessed lighting project" }
+  ]
   }
   
