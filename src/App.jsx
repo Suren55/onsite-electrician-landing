@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import {
+  ThemeProvider,
+  CssBaseline,
+  Box,
+  Container,
+  Typography,
+} from "@mui/material";
+import theme from "./theme";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {/* PAGE SHELL ONLY — sections come next */}
+      <Box
+        sx={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          background:
+            "linear-gradient(180deg, #0A2540 0%, #0A2540 60%, #0E2F4F 100%)",
+        }}>
+        <Container maxWidth="lg">
+          <Typography
+            variant="h1"
+            sx={{ color: "white", fontSize: { xs: 36, sm: 48, md: 56 } }}>
+            Electrician Landing — OnSite Digital (Skeleton)
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{ color: "rgba(255,255,255,0.9)", mt: 2 }}>
+            Next: add Hero, Trust Bar, Services, and more.
+          </Typography>
+        </Container>
+      </Box>
+      <Box sx={{ py: 6 }}>
+        <Container maxWidth="lg">
+          <Typography color="text.secondary" variant="body2">
+            © {new Date().getFullYear()} Demo — OnSite Digital
+          </Typography>
+        </Container>
+      </Box>
+    </ThemeProvider>
+  );
 }
-
-export default App

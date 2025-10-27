@@ -1,0 +1,3 @@
+# public/human.txt
+Creator: OnSite Digital
+Purpose: Demo electrician landing for validation
