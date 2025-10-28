@@ -1,12 +1,44 @@
 {
-    "businessName": "Mike’s Electrical Services",
+    "businessName": "SBG Electrical",
+    "logo": {
+      "src": "/src/assets/logos/sbg-logo.webp",
+      "srcSet": "/images/logo-sbg@2x.png 2x",
+      "alt": "SBG Electrical",
+      "height": 48          
+    },
     "phone": "+17095551234",
     "displayPhone": "(709) 555-1234",
+    "email": "hello@sbg-electrical.ca",
+  "address": {
+    "street": "123 Water St",
+    "city": "St. John’s",
+    "province": "NL",
+    "postal": "A1A 1A1",
+    "country": "Canada",
+    "mapUrl": "https://maps.google.com/?q=123+Water+St,+St+John's+NL"
+  },
+  "hours": {
+    "monFri": "8:00am – 6:00pm",
+    "sat": "9:00am – 4:00pm",
+    "sun": "On-call"
+  },
+  "social": {
+    "facebook": "https://facebook.com/yourpage",
+    "instagram": "https://instagram.com/yourpage",
+    "google": "https://g.page/yourplace",
+    "linkedin": "https://linkedin.com/company/yourco",
+    "tiktok": "https://tiktok.com/@yourpage"
+  },
     "serviceArea": "St. John’s & Area",
     "heroHeadline": "Reliable Electricians for Homes & Businesses",
     "heroSubtext": "Panel upgrades, EV charger installs, lighting design, troubleshooting, and emergency calls. Serving St. John’s & surrounding areas with upfront pricing and on-time service.",
     "primaryCta": "Call Now",
     "secondaryCta": "Get Free Estimate",
+    "heroImage": "/src/assets/work/hero-electrician-desktop.png",
+    "heroImageMobile": "/src/assets/work/hero-electrician-desktop.png",
+    "heroImageAlt": "Electrician installing a modern panel",
+    "heroImagePosition": "center center",
+    "heroImagePositionMobile": "center",
     "trustPoints": [
         { "icon": "verified", "text": "Code-Compliant & Guaranteed" },
         { "icon": "schedule", "text": "Same-Week Scheduling" },
@@ -27,9 +59,64 @@
     { "icon": "warranty", "title": "Workmanship Guarantee", "blurb": "We stand behind our work with a written warranty." }
   ],
   "gallery": [
+    { "src": "/src/assets/work/lighting.png", "alt": "Recessed lighting project" },
     { "src": "/src/assets/work/panel-upgrade.png", "alt": "Panel upgrade installation" },
-    { "src": "/src/assets/work/ev-charger.png", "alt": "EV charger install" },
-    { "src": "/src/assets/work/lighting.png", "alt": "Recessed lighting project" }
-  ]
+    { "src": "/src/assets/work/ev-charger.png", "alt": "EV charger install" }
+  ],
+  "serviceAreas": [
+    {
+      "city": "St. John’s",
+      "neighborhoods": ["Downtown", "East End", "West End", "Kenmount", "Quidi Vidi", "Rabbittown", "Georgestown", "Southlands", "Kilbride"]
+    },
+    {
+      "city": "Mount Pearl",
+      "neighborhoods": ["Glendale", "Brookfield", "Pearlgate", "Kenmount Park"]
+    },
+    {
+      "city": "Paradise",
+      "neighborhoods": ["Elizabeth Park", "Octagon Pond", "Evergreen Village", "Paradise Road"]
+    }
+  ],
+  "serviceAreasCoords": [
+    { "name": "St. John’s", "lat": 47.5605, "lon": -52.7126 },
+    { "name": "Mount Pearl", "lat": 47.5189, "lon": -52.8073 },
+    { "name": "Paradise", "lat": 47.5287, "lon": -52.8873 }
+  ],
+  "serviceAreasIntro": "Proudly serving St. John’s metro and surrounding communities. If you don’t see your area, give us a call — we likely cover it.",
+  "serviceAreasMap": "/images/map-service-areas.webp",      
+  "serviceAreasMapAlt": "Map of service coverage around St. John’s",
+  "financing": {
+    "headline": "Financing Available",
+    "subtext": "Break larger projects into easy monthly payments. Quick online approval, no obligation.",
+    "partners": [
+      { "name": "FinanceIt", "logo": "/images/financeit.webp", "url": "https://financeit.io" },
+      { "name": "Flexiti",   "logo": "/images/flexiti.webp",   "url": "https://flexiti.com" }
+    ],
+    "benefits": [
+      "As low as 0% promo plans",
+      "No prepayment penalties",
+      "Decisions in minutes"
+    ],
+    "defaults": {
+      "amount": 2500,
+      "apr": 10.99,
+      "termMonths": 36
+    },
+    "disclaimer": "Rates and terms shown are examples only and subject to credit approval from our financing partners."
+  },
+  "emergency": {
+    "enabled": true,
+    "headline": "24/7 Emergency Electrician",
+    "subtext": "Power out? Breaker tripping? Burning smell? We’re on call nights, weekends, and holidays across St. John’s metro.",
+    "avgResponseMins": 45,
+    "feeNote": "After-hours dispatch fee may apply. Upfront pricing before any work begins.",
+    "badges": ["Licensed & Insured", "Fully stocked vans", "Code-compliant repairs"],
+    "scenarios": [
+      { "title": "Partial power / outage" },
+      { "title": "Breaker tripping" },
+      { "title": "Burning smell / hot outlets" },
+      { "title": "GFCI won’t reset" }
+    ]
+  }
   }
   

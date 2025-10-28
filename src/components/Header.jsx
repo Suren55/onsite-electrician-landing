@@ -12,6 +12,7 @@ import {
   ListItemText,
   Typography,
   Stack,
+  Link as MuiLink,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
@@ -21,11 +22,14 @@ const LINKS = [
   { label: "Services", href: "#services" },
   { label: "Why Us", href: "#why-us" },
   { label: "Work", href: "#work" },
-  { label: "FAQ", href: "#faq" }, // we’ll add FAQ later; safe to keep for now
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const hasLogo = Boolean(content.logo?.src);
+  console.log(content.logo?.src);
+  const logoHeight = content.logo?.height ?? 28; // default height
 
   return (
     <>
@@ -42,11 +46,36 @@ export default function Header() {
         <Container maxWidth="lg">
           <Toolbar disableGutters sx={{ minHeight: 72 }}>
             {/* Logo / Brand */}
-            <Typography
-              variant="h6"
-              sx={{ fontWeight: 800, letterSpacing: -0.2, mr: 2 }}>
-              {content.businessName || "Electrician"}
-            </Typography>
+            <MuiLink
+              href="/"
+              underline="none"
+              sx={{
+                display: "inline-flex",
+                alignItems: "center",
+                mr: 2,
+                color: "inherit",
+              }}
+              aria-label={`${content.businessName || "Home"}`}>
+              {hasLogo ? (
+                <Box
+                  component="img"
+                  src={content.logo.src}
+                  // srcSet={content.logo.srcSet}
+                  alt={content.logo.alt || content.businessName || "Logo"}
+                  sx={{
+                    height: logoHeight,
+                    width: "auto",
+                    display: "block",
+                  }}
+                />
+              ) : (
+                <Typography
+                  variant="h6"
+                  sx={{ fontWeight: 800, letterSpacing: -0.2 }}>
+                  {content.businessName || "Electrician"}
+                </Typography>
+              )}
+            </MuiLink>
 
             {/* Desktop Nav */}
             <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1, ml: 2 }}>
@@ -85,10 +114,28 @@ export default function Header() {
       {/* Mobile Drawer */}
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <Box sx={{ width: 280, p: 2 }}>
-          <Stack spacing={2} sx={{ mb: 1 }}>
-            <Typography variant="h6" sx={{ fontWeight: 800 }}>
-              {content.businessName || "Electrician"}
-            </Typography>
+          <Stack spacing={2} sx={{ mb: 1, alignItems: "flex-start" }}>
+            {/* Drawer logo */}
+            <MuiLink
+              href="/"
+              underline="none"
+              color="inherit"
+              onClick={() => setOpen(false)}>
+              {hasLogo ? (
+                <Box
+                  component="img"
+                  src={content.logo.src}
+                  // srcSet={content.logo.srcSet}
+                  alt={content.logo.alt || content.businessName || "Logo"}
+                  sx={{ height: logoHeight, width: "auto", display: "block" }}
+                />
+              ) : (
+                <Typography variant="h6" sx={{ fontWeight: 800 }}>
+                  {content.businessName || "Electrician"}
+                </Typography>
+              )}
+            </MuiLink>
+
             <Button
               fullWidth
               variant="contained"
@@ -99,6 +146,7 @@ export default function Header() {
               Call {content.displayPhone || ""}
             </Button>
           </Stack>
+
           <List>
             {LINKS.map((link) => (
               <ListItemButton
