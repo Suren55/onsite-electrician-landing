@@ -1,7 +1,7 @@
 {
     "businessName": "SBG Electrical",
     "logo": {
-      "src": "/src/assets/logos/sbg-logo.webp",
+      "src": "/images/sbg-logo.webp",
       "srcSet": "/images/logo-sbg@2x.png 2x",
       "alt": "SBG Electrical",
       "height": 48          
@@ -34,7 +34,7 @@
     "heroSubtext": "Panel upgrades, EV charger installs, lighting design, troubleshooting, and emergency calls. Serving St. John’s & surrounding areas with upfront pricing and on-time service.",
     "primaryCta": "Call Now",
     "secondaryCta": "Get Free Estimate",
-    "heroImage": "/src/assets/work/hero-electrician-desktop.png",
+    "heroImage": "/images/hero-electrician-desktop.png",
     "heroImageMobile": "/src/assets/work/hero-electrician-desktop.png",
     "heroImageAlt": "Electrician installing a modern panel",
     "heroImagePosition": "center center",
@@ -59,9 +59,9 @@
     { "icon": "warranty", "title": "Workmanship Guarantee", "blurb": "We stand behind our work with a written warranty." }
   ],
   "gallery": [
-    { "src": "/src/assets/work/lighting.png", "alt": "Recessed lighting project" },
-    { "src": "/src/assets/work/panel-upgrade.png", "alt": "Panel upgrade installation" },
-    { "src": "/src/assets/work/ev-charger.png", "alt": "EV charger install" }
+    { "src": "/images/lighting.png", "alt": "Recessed lighting project" },
+    { "src": "/images/panel-upgrade.png", "alt": "Panel upgrade installation" },
+    { "src": "/images/ev-charger.png", "alt": "EV charger install" }
   ],
   "serviceAreas": [
     {
